@@ -2,4 +2,4 @@
 git add --all
 git commit -m maintenance
 git push origin https://github.com/ThomasAlanConley/examples.git
-git push secondary
+git push secondary https://github.com/LincLabUCCS/examples.git
