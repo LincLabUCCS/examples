@@ -1,0 +1,28 @@
+#!/bin/bash
+build=$(echo "$1" | cut -f 1 -d '.')
+
+# ./clean  2> /dev/null # remove temp files
+rm ${build}.pdf # remove the target of this build
+
+echo First build
+pdflatex  ${build}.tex
+
+# no errors stopped the first build so clear and continue
+clear
+
+echo bibtex build
+bibtex ${build}  2>&1 
+
+
+echo Second build
+pdflatex  ${build}.tex 2>&1 # >/dev/null
+
+clear
+
+echo last build
+#--shell-escape to avoid gnuplot warnings
+pdflatex  --shell-escape ${build}.tex  2>&1 | grep Warning 
+
+# osascript -e 'quit app "Preview"'
+open -a /Applications/Preview.app/ ${build}.pdf
+# open $build.pdf&

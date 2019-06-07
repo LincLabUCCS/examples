@@ -1,0 +1,10 @@
+#!/bin/bash
+# latex can generate sooo many temp files
+rm *.nav *.snm *.vrb *.aux *.bbl *.lo? *.toc *.out *.gnuplot *.synctex.gz *.blg *.fdb_latexmk *.fls *.dvi *.table
+
+# delete all pdf files that corespond
+# to tex source files
+for file in *.tex; do
+	pdf=${file/\.tex/\.pdf}
+	rm $pdf
+done
