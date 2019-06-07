@@ -1,13 +1,5 @@
-# examples
-Let me turn the `m` upside-down and write `w` instead, because in Machine Learning we talk about `weights` (w) and biases (b) so we have :
+# Some examples for REU students at the University of Colorado Colorado Springs (UCCS)
 
-\begin{equation}
-    y = w*x + b
-\end{equation}
+This just a foray  [foray](https://www.google.com/search?q=foray&rlz=1C5CHFA_enUS814US814&oq=foray&aqs=chrome..69i57j0l5.1250j0j4&sourceid=chrome&ie=UTF-8) into using GitHub as a lecture repository... more to come.
 
-Note that this function is a specific case 
-of a linear function:
-
-\begin{equation}
-y = (w_n*x_n) + (w_{n-1}*x_{n-1}) + \dots + w_{0}*x_{0} + b
-\end{equation}
+Check out the ``.ipynb`` files for specific lectures.  Copy the ``.py`` files for serious work :)
