@@ -5,7 +5,7 @@ from random import sample
 
 def main():
 
-	sm = SimModel(source='glove') # or 'word2vec' , adding etc. more
+	sm = SimModel(source='glove') # or 'word2vec' test 1
 
 	top10 = sm.model.most_similar(positive=['hello'], topn=10)
 
