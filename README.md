@@ -1,4 +1,4 @@
-# Some examples for students at the University of Colorado Colorado Springs (UCCS). The best students "EV (wait for it..) ER.
+# Some examples for students at the University of Colorado Colorado Springs (UCCS); The best students "EV (wait for it..) ER.
 
 This just a [foray](https://www.google.com/search?q=foray&rlz=1C5CHFA_enUS814US814&oq=foray&aqs=chrome..69i57j0l5.1250j0j4&sourceid=chrome&ie=UTF-8) into using GitHub as a lecture repository... more to come.
 
