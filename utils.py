@@ -31,18 +31,21 @@ def getArgs():
     return args
 
 def getFileUrl(filepath,cachepath='.'):
+    from os import path 
+    from os.path import abspath
     from keras.utils.data_utils import get_file
-    from os import path
+
+    # default is relative to .keras directory in ~
+    # so we better make the path absolute
+    cachepath = abspath(cachepath)
 
     _, filename = path.split(filepath)
-
     cachefile = path.join(cachepath,filename)
+
     if not path.exists(cachefile):
-        # _, filepart = path.split(filepath)
         fpath = get_file(
             filename,
             origin=filepath,
-            # default is relative to .keras directory in ~
             cache_subdir= cachepath,
             )
     return cachefile

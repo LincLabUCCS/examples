@@ -15,15 +15,15 @@ from os.path import join
 # utility function (in utils.py) to download file and cache it
 from utils import getFileUrl
 from zipfile import ZipFile
-print('Processing text dataset')
 
-DATA_DIR = '/Users/tconley/_school/data'
-
+# the location to store downloaded data files, if you don't have the 
+# file cached locally it will take a long time, the first time
+DATA_DIR = './data'
 getFileUrl( 'http://nlp.stanford.edu/data/glove.6B.zip', # url source
             DATA_DIR)                                    # where to cache
 #########################################################################
 
-GLOVE_ZIP = '/Users/tconley/_school/data/glove.6B.zip'
+GLOVE_ZIP = join(DATA_DIR,'glove.6B.zip')
 GLOVE_TXT = 'glove.6B.300d.txt' # or 'glove.6B.100d.txt' for example
 
 BASE_DIR = ''
@@ -35,13 +35,13 @@ VALIDATION_SPLIT = 0.2
 
 EPOCHS = 2
 
-print('Indexing word vectors.')
+print('Indexing word vectors...')
 
 embeddings_index = {}
 
 # leave the glove file zipped and open the text file within
 with ZipFile(GLOVE_ZIP) as myzip:
-    with myzip.open('glove.6B.100d.txt') as f:
+    with myzip.open(GLOVE_TXT) as f:
       for line in f:
           values = line.split()
           word = values[0]
