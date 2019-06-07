@@ -7,3 +7,6 @@ We all know I need to organize my code... no more waiting for me to find example
 Check out the ``.ipynb`` files for specific lectures.  Copy or clone the ``.py`` files for serious work :)
 
 It's just scraps. 
+
+I'll be adding more in-depth, real-world examples once I figure out how to [not] include the large datasets required.
+
